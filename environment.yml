@@ -1,0 +1,22 @@
+name: recipe-finder
+channels:
+  - conda-forge
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - scipy
+  - pytorch
+  - torchaudio
+  - transformers
+  - gradio
+  - ffmpeg
+  - pip:
+    - openai-whisper
+    - soundfile
+    - accelerate
+    - sentencepiece
+    - protobuf
+    - librosa
