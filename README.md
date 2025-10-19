@@ -23,7 +23,7 @@ An intelligent voice-powered recipe generator that creates delicious recipes fro
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/recipe_finder.git
+git clone https://github.com/sawsanabdulbari/recipe_finder.git
 cd recipe_finder
 
 # Create virtual environment (recommended)
