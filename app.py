@@ -860,8 +860,8 @@ def main():
     
     app.launch(
         share=config.SHARE_LINK,
-        server_name="127.0.0.1",
-        server_port=7860,
+        server_name=config.SERVER_HOST,  # Use config for flexibility (0.0.0.0 for HF, 127.0.0.1 for local)
+        server_port=config.SERVER_PORT,
         show_error=True,
         max_file_size="50MB",  # 50MB max file size
         allowed_paths=["./"]  # Allow current directory
