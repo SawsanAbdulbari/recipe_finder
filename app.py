@@ -7,12 +7,15 @@ import sys
 import os
 
 # Add src to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+src_path = os.path.join(os.path.dirname(__file__), 'src')
+if src_path not in sys.path:
+    sys.path.insert(0, src_path)
 
-from src.speech_to_text import get_stt_instance
-from src.recipe_generator import get_generator_instance
-from src.groq_recipe_generator import get_groq_generator_instance
-from src.utils import (
+# Import from src modules (without src prefix since it's in path)
+from speech_to_text import get_stt_instance
+from recipe_generator import get_generator_instance
+from groq_recipe_generator import get_groq_generator_instance
+from utils import (
     clean_ingredients_text,
     validate_audio_input,
     create_recipe_card,
